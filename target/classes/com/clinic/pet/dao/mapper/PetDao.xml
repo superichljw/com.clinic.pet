@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.clinic.pet.dao.PetDao">
+	<select id="select" resultType="com.clinic.pet.dto.NoticeVO">
+		<![CDATA[
+		select * 
+		from (
+		select rownum as m,
+		notice_num,notice_title,notice_date, notice_name,
+		notice_hit,notice_content from (
+		select
+		notice_num,notice_title, notice_date,
+		notice_name,notice_hit,notice_content 
+		from 
+		notice_board 
+		order by
+		notice_num desc)
+		sub where rownum <= #{param1}*#{param2} 
+		order by notice_num desc)
+		where m>=(#{param1}-1)*#{param2}+1 ]]>
+	</select>
+
+	<select id="dataCount" resultType="_int">
+		SELECT COUNT(notice_num)
+		Ncount from notice_board
+	</select>
+	<insert id="insertBoard">
+		insert into notice_board
+		(notice_num, notice_title,
+		notice_name, notice_hit,notice_content)
+		values
+		(notice_seq.nextval,
+		#{param1}, #{param2}, 0, #{param3})
+
+	</insert>
+	<delete id="deleteBoard">
+		delete from notice_board where notice_num=#{param1}
+	</delete>
+
+	<select id="selectOneBoardByNum"
+		resultType="com.clinic.pet.dto.NoticeVO">
+		select * from notice_board where notice_num = #{param1}
+	</select>
+
+	<update id="updateBoard">
+		update notice_board set
+		notice_name=#{param1},
+		notice_title=#{param2},
+		notice_content=#{param3},
+		notice_date=sysdate
+		where
+		notice_num=#{param4}
+	</update>
+	<update id="upHit">
+		update notice_board set notice_hit=notice_hit+1 where
+		notice_num=#{param1}
+	</update>
+
+
+	<select id="Newsselect"
+		resultType="com.clinic.pet.dto.NewsBoardVO">
+	<![CDATA[
+		select * 
+		from (
+		select rownum as m,
+		news_num,news_title,news_date, news_name,
+		news_hit,news_content from (
+		select
+		news_num,news_title, news_date,
+		news_name,news_hit,news_content 
+		from 
+		news_board 
+		order by
+		news_num desc)
+		sub where rownum <= #{param1}*#{param2} 
+		order by news_num desc)
+		where m>=(#{param1}-1)*#{param2}+1 ]]>
+	</select>
+	<select id="NewsdataCount" resultType="_int">
+		select count(news_num)
+		Ncount from news_board
+	</select>
+	<insert id="NewsinsertBoard">
+		insert into news_board(
+		news_num, news_title,
+		news_name, news_hit, news_content)
+		values (news_seq.nextval, #{param1},
+		#{param2}, 0, #{param3})
+	</insert>
+	<delete id="NewsdeleBoard">
+		delete from news_board where news_num=#{param1}
+	</delete>
+	<select id="NewsselectOneBoardByNum"
+		resultType="com.clinic.pet.dto.NewsBoardVO">
+		select * from news_board where news_num = #{param1}
+	</select>
+	<update id="NewsupdateBoard">
+		update news_board set
+		news_name=#{param1},
+		news_title=#{param2},
+		news_content=#{param3},
+		news_date=sysdate
+		where
+		news_num=#{param4}
+	</update>
+	<update id="NewsupHit">
+		update news_board set news_hit=news_hit+1 where
+		news_num=#{param1}
+	</update>
+
+	<select id="FaqSelect"
+		resultType="com.clinic.pet.dto.FaqBoardVO">
+	<![CDATA[
+		select * 
+		from (
+		select rownum as m,
+		faq_num,faq_title,faq_date, faq_name,
+		faq_hit,faq_content from (
+		select
+		faq_num,faq_title, faq_date,
+		faq_name,faq_hit,faq_content 
+		from 
+		faq_board 
+		order by
+		faq_num desc)
+		sub where rownum <= #{param1}*#{param2} 
+		order by faq_num desc)
+		where m>=(#{param1}-1)*#{param2}+1 ]]>
+	</select>
+
+	<select id="FaqdataCount" resultType="_int">
+		select count(faq_num) count
+		from faq_board
+	</select>
+	<insert id="FaqinsertBoard">
+		insert into faq_board(faq_num, faq_title, faq_name,
+		faq_hit, faq_content)
+		values (faq_seq.nextval, #{faq_title},
+		#{faq_name}, 0, #{faq_content})
+	</insert>
+	<delete id="FaqdeleteBoard">
+		delete from faq_board where faq_num=#{param1}
+	</delete>
+	<select id="FaqselectOneBoardByNum"
+		resultType="com.clinic.pet.dto.FaqBoardVO">
+		select * from faq_board where faq_num = #{param1}
+	</select>
+	<update id="FaqupdateBoard">
+		update faq_board set faq_name = #{faq_name},
+		faq_title = #{faq_title},
+		faq_content = #{faq_content},
+		faq_date =
+		sysdate
+		where
+		faq_num = #{faq_num}
+	</update>
+	<update id="FaqupHit">
+		update faq_board set faq_hit=faq_hit+1 where
+		faq_num=#{param1}
+	</update>
+
+
+	<select id="Qnaselect"
+		resultType="com.clinic.pet.dto.QnaBoardVO">
+	<![CDATA[
+		select * 
+		from (
+		select rownum as m,
+		qna_num,qna_title,qna_date, qna_name,
+		qna_hit,qna_content from (
+		select
+		qna_num,qna_title, qna_date,
+		qna_name,qna_hit,qna_content 
+		from 
+		qna_board 
+		order by
+		qna_num desc)
+		sub where rownum <= #{param1}*#{param2} 
+		order by qna_num desc)
+		where m>=(#{param1}-1)*#{param2}+1 ]]>
+	</select>
+	<select id="QnadataCount" resultType="_int">
+		select count(qna_num) count
+		from qna_board
+	</select>
+	<insert id="QnainsertBoard">
+		insert into qna_board(qna_num, qna_title, qna_name,
+		qna_hit, qna_content)
+		values (qnaboard_seq.nextval, #{qna_title},
+		#{qna_name}, 0,
+		#{qna_content})
+	</insert>
+	<delete id="QnadeleteBoard">
+		delete from qna_board where qna_num=#{param1}
+	</delete>
+	<select id="QnaselectOneBoardByNum"
+		resultType="com.clinic.pet.dto.QnaBoardVO">
+		select * from qna_board where qna_num = #{param1}
+	</select>
+	<update id="QnaupdateBoard">
+		update qna_board set qna_name=#{qna_name},
+		qna_title=#{qna_title},
+		qna_content=#{qna_content},
+		qna_date=sysdate
+		where qna_num=#{qna_num}
+	</update>
+	<update id="QnaupHit">
+		update qna_board set qna_hit=qna_hit+1 where
+		qna_num=#{param1}
+	</update>
+
+	<select id="petclinicSearchselect"
+		resultType="com.clinic.pet.dto.PetClinicSearchVO">
+	<![CDATA[
+		select * from(select rownum m, sub.* from 
+		(select *from AHL order by AHLnum asc)sub
+		where rownum <= #{param1}*#{param2} and ${param3} like '%'||#{param4}||'%') 
+		where m>=(#{param1}-1)*#{param2}+1]]>
+	</select>
+	<select id="petclnicdataCount" resultType="_int">
+		select count(AHLnum)
+		as bCount from AHL where ${param1} like '%'||#{param2}||'%'
+	</select>
+
+	<insert id="insertBooking">
+		insert into
+		booking(booking_num,booking_id,booking_Add,booking_Tel,booking_Date,booking_Name)
+		values(booking_seq.nextval,#{booking_id},#{booking_Name}, #{booking_Add},
+		#{booking_Tel},#{booking_Date})
+	</insert>
+	<select id="bookingselectOneBoardByNum"
+		resultType="com.clinic.pet.dto.PetClinicSearchVO">
+		select * from AHL where AHLnum = #{param1}
+	</select>
+	<select id="bookingselectOneBoardById"
+		resultType="com.clinic.pet.dto.BookingVO">
+		select * from booking where
+		booking_id=#{param1} order by
+		booking_num desc
+	</select>
+
+	<select id="bookingselect"
+		resultType="com.clinic.pet.dto.BookingVO">
+		
+		<![CDATA[select * from (
+		select rownum as m,booking_num,booking_id,
+		booking_name, booking_add,booking_tel,
+		booking_Date,orderDate from (
+		select
+		booking_num,booking_id,booking_name, 
+		booking_add,booking_tel,
+		booking_Date,orderDate from booking order by booking_num desc)
+		sub
+		where rownum <= #{param1}*#{param2} order by booking_num desc) 
+		where
+		m>=(#{param1}-1)*#{param2}+1]]>
+	</select>
+
+	<select id="bookingdataCount" resultType="_int">
+		select count(booking_num) Bcount from booking
+	</select>
+
+	<select id="mypagesearchSelect"
+		resultType="com.clinic.pet.dto.VetClinicVO">
+	<![CDATA[
+	select * from(select 
+	rownum m, sub.* 
+	from (
+	select * from vetmember order by rownum desc) 
+	sub where rownum <= #{param1}*#{param2} 
+	and ${param3} like '%'||#{param4}||'%') where m>=(#{param1}-1)*#{param2}+1
+	]]>
+	</select>
+	<select id="mypagedatacount" resultType="_int">
+		select count(userid) as bCount from vetmember where
+		${param1} like
+		'%'||#{param2}||'%'
+
+	</select>
+
+	<select id="getMember"
+		resultType="com.clinic.pet.dto.VetClinicVO">
+		select * from vetmember where userid=#{param1}
+	</select>
+
+	<select id="userCheck" resultType="_int">
+		select count(*) from vetmember
+		where userid=#{param1}
+	</select>
+
+	<select id="confirmID" resultType="_int">
+		select count(*) from vetmember
+		where userid=#{param1}
+		
+	</select>
+
+	<insert id="signup">
+		insert into
+		vetmember(usertype,userid,pwd,email,addr,name,phone,personal,emailok,pettype,petname,petnum,hospital_name,hospital_num,hospital_li,auth)
+		values(#{usertype},#{userid},#{pwd},#{email},#{addr},#{name},#{phone},#{personal},#{emailok},#{pettype},#{petname},#{petnum},#{hospital_name},#{hospital_num},#{hospital_li},#{auth})
+	</insert>
+	<update id="updateMember">
+		update vetmember set pwd=#{pwd},
+		email=#{email},
+		addr=#{addr}, name=#{name}, phone=#{phone},
+		emailok=#{emailok},
+		pettype=#{pettype},
+		petname=#{petname},
+		petnum=#{petnum},
+		usertype=#{usertype},hospital_name=#{hospital_name},
+		hospital_num=#{hospital_num},hospital_li=#{hospital_li},auth=#{auth}
+		where userid=#{userid}
+	</update>
+
+	<select id="select5Boards"
+		resultType="com.clinic.pet.dto.VetClinicBoardVO">
+	<![CDATA[
+	select * from (select * from board order by rownum desc)where rownum < 6 order by rownum desc
+	]]>
+	</select>
+
+	<select id="selectAllBoards"
+		resultType="com.clinic.pet.dto.VetClinicBoardVO">
+		select * from board order by num desc
+	</select>
+	<insert id="insertvetBoard">
+		insert into board(num, name, email, pass, title,
+		content)
+		values(board_seq.nextval, #{name}, #{email}, #{pass},
+		#{title}, #{content})
+	</insert>
+	<update id="updateReadCount">
+		update board set readcount=readcount+1
+		where
+		num=#{param1}
+	</update>
+	<select id="vetselectOneBoardByNum"
+		resultType="com.clinic.pet.dto.VetClinicBoardVO">
+		select * from board where num = #{param1}
+	</select>
+	<update id="vetupdateBoard">
+		update board set name=#{name}, email=#{email},
+		pass=#{pass}, title=#{title},
+		content=#{content} where num=#{num}
+	</update>
+	<delete id="vetdeleteBoard">
+		delete board where num=#{param1}
+	</delete>
+
+	<insert id="insertComment">
+		insert into
+		board_comment(comment_num,comment_board,comment_id,comment_content)
+		values(boardComment_seq.nextval, #{comment_board}, #{comment_id},
+		#{comment_content})
+	</insert>
+	<select id="CommentselectOneBoardByNum"
+		resultType="com.clinic.pet.dto.vetboardCommentVO">
+		select * from board_comment where
+		comment_board=#{param1}
+		order by comment_num desc
+	</select>
+</mapper>

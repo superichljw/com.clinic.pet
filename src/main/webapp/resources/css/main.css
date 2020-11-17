@@ -1,0 +1,1371 @@
+* {
+	font-family: 'NanumSquare';
+}
+
+#top {
+	width: 96%;
+	margin: 0;
+	padding: 30px 45px;
+	height: 100px;
+	border-bottom: 1px solid lightgray;
+}
+
+#top ul {
+	list-style-type: none;
+	padding-left: 0px;
+	margin: 0;
+}
+
+#top ul li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#top ul li .top01 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#top ul li .top01 label {
+	text-decoration: none;
+	font-size: 40px;
+	color: black;
+	padding-left: 50px;
+}
+
+.coverMenu {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	z-index: 10;
+	position: fixed;
+}
+
+.leftmenu {
+	width: 20%;
+	height: 100%;
+	background-color: white;
+}
+
+.rightmenu {
+	width: 80%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.submenu li {
+	font-family: 'NanumSquare';
+	font-size: 25px;
+	padding-left: 60px;
+	padding-top: 80px;
+}
+
+.submenu a {
+	text-decoration: none;
+	color: black;
+}
+
+.close {
+	cursor: pointer;
+	float: right;
+	padding-right: 50px;
+	font-size: 25px;
+	font-family: 'NanumSquare';
+	margin-top: 50px;
+}
+
+.labelBtn {
+	cursor: pointer;
+}
+
+#top ul li .top02 {
+	text-align: center;
+}
+
+#top ul li .top03 {
+	height: 100px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+#top ul li .top03 a {
+	text-decoration: none;
+	font-size: 20px;
+	padding-right: 40px;
+	color: black;
+}
+
+#con1 {
+	width: auto;
+	height: 700px;
+	background-color: wheat;
+}
+
+.mySlides {
+	display: none
+}
+
+#con1 img {
+	width: auto;
+	height: 700px;
+}
+
+.slideshow-container {
+	width: auto;
+	height: 700px;
+	position: relative;
+	margin: auto;
+}
+
+.prev {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right:;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	height: 460px;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {from { opacity:.4
+	
+}
+
+to {
+	opacity: 1
+}
+
+}
+@keyframes fade {from { opacity:.4
+	
+}
+
+to {
+	opacity: 1
+}
+
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.prev, .next, .text {
+		font-size: 11px
+	}
+}
+
+#con2 .con2pic {
+	list-style-type: none;
+	text-align: center;
+}
+
+#con2 .con2pic div {
+	display: inline-block;
+}
+
+#con2 .pic1 {
+	width: 400px;
+	height: 500px;
+	overflow: hidden;
+	margin: 15px;
+}
+
+#con2 .pic2 {
+	width: 400px;
+	height: 500px;
+	overflow: hidden;
+	margin: 15px;
+}
+
+#con2 .pic3 {
+	width: 400px;
+	height: 500px;
+	overflow: hidden;
+	margin: 15px;
+}
+
+#con2 .pic4 {
+	width: 400px;
+	height: 500px;
+	overflow: hidden;
+	margin: 15px;
+}
+
+#con2 img {
+	width: 400px;
+	height: 500px;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	transition: transform.6s;
+}
+
+#con2 .pic1 img:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: transform.6s;
+	cursor: pointer;
+}
+
+#con2 .pic2 img:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: transform.6s;
+	cursor: pointer;
+}
+
+#con2 .pic3 img:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: transform.6s;
+	cursor: pointer;
+}
+
+#con2 .pic4 img:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+	transition: transform.6s;
+	cursor: pointer;
+}
+
+#con3 {
+	width: 100%;
+}
+
+#con4 {
+	width: 80%;
+	margin: 0 auto;
+}
+/*�뭼�꽣*/
+#footer {
+	width: 100%;
+	height: 200px;
+	margin-top: 150px;
+	background-color: lightslategrey;
+}
+
+#footer .footer_left {
+	width: 50%;
+	margin: 0px auto;
+	padding-top: 50px;
+	vertical-align: top;
+	padding-left: 100px;
+}
+
+#footer .footer_img {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 60px;
+}
+
+#footer .footer-right {
+	width: 70%;
+	text-align: left;
+	color: white;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 40px;
+}
+
+#footer .footer-right h2 {
+	margin-top: 0px;
+}
+
+#writebtn {
+	width: 130px;
+	height: 50px;
+	border-radius: 15px;
+	font-size: 20px;
+	margin: 30px 50px 30px 30px;
+	background-color: lavender;
+	border: none;
+	outline: none;
+}
+
+#writebtn:hover {
+	cursor: pointer;
+}
+
+#table {
+	width: 100%;
+}
+
+#table .btncon {
+	width: 100%;
+	text-align: right;
+}
+
+#table .btncon .btn {
+	text-align: right;
+}
+
+#table tr td {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px 0px;
+	border-top: 1px solid lightgray;
+	border-collapse: collapse;
+}
+
+#table .tbtitle {
+	background-color: blanchedalmond;
+}
+
+#tableno {
+	padding-top: 30px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#con5 {
+	text-align: center;
+}
+
+#con5 p {
+	font-size: 42px;
+}
+
+#con5 p img {
+	width: 60px;
+	height: 80px;
+	padding-right: 40px;
+}
+
+#con5 ul {
+	list-style-type: none;
+}
+
+#con5 ul li {
+	display: inline-block;
+}
+
+#con5 .promise img {
+	width: 400px;
+	height: 500px;
+}
+
+#top .top03 a:hover {
+	cursor: pointer;
+}
+/* �뿬湲곌퉴吏� */
+
+/*signup.html*/
+.input-block p {
+	width: 120px;
+	margin: 0;
+	text-align: right;
+}
+
+.input-block-addr p {
+	width: 120px;
+	margin: 0;
+	text-align: right;
+}
+
+.input .textblock {
+	margin-left: 20px;
+	text-align: right;
+	width: 200px;
+	height: 20px;
+}
+
+.input #addrblock {
+	text-align: left;
+	width: 397px;
+	height: 20px;
+	text-align: center;
+}
+
+select {
+	text-align: right;
+	width: 100px;
+	height: 27px;
+	vertical-align: middle;
+}
+
+.input-block {
+	list-style-type: none;
+}
+
+.input-block-addr {
+	list-style-type: none;
+}
+
+.input-block-addr .addr {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.input-block-addr .addr .addr-1 {
+	display: inline-block;
+	margin-bottom: 10px;
+	vertical-align: top;
+}
+
+.input-block li {
+	display: inline-block;
+}
+
+.submit {
+	text-align: center;
+}
+
+.submit input {
+	margin-left: 40px;
+}
+
+.submit input {
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 50px;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+.submit input:hover {
+	cursor: pointer;
+}
+
+#signupForm h1 {
+	padding: 20px;
+	text-align: center;
+}
+
+#updateForm h1 {
+	padding: 20px;
+	text-align: center;
+}
+
+/* #updateForm {
+	margin: 0 auto;
+} */
+#detailAddress {
+	width: 190px;
+	height: 20px;
+	margin: 10px 0px;
+}
+
+#extraAddress {
+	width: 190px;
+	height: 20px;
+	margin: 10px 10px 10px 0px;
+}
+
+#postcode {
+	width: 80px;
+	height: 20px;
+}
+
+#postcodeSearch {
+	width: 100px;
+	height: 25px;
+}
+/*selfinspection.html*/
+#self {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#self p {
+	font-size: 20px;
+	line-height: 30px;
+}
+
+#selfpic {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#selfpic ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+#selfpic ul li {
+	display: inline-block;
+	padding-left: 80px;
+	padding-top: 50px;
+}
+
+#selfpic .selfpic1 {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+}
+
+.selfpic1 img:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	filter: brightness(60%);
+	transition: transform.6s;
+	cursor: pointer;
+}
+
+#selfpic label {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/*board.html*/
+.board-pageNum {
+	text-align: center;
+	padding: 30px 0px;
+}
+
+.board-pageNum ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.board-pageNum li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+.board-pageNum li:hover {
+	background-color: #22a8f1;
+	color: white;
+	cursor: pointer;
+}
+
+/*vetboard.jsp*/
+.vet-pageNum a {
+	text-decoration: none;
+}
+
+
+
+#tab {
+	padding-top: 100px;
+	width: 100%;
+	text-align: center;
+}
+
+.tabmenu {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.tabmenu button {
+	border: none;
+	outline: none;
+	background-color: white;
+	width: 24.8%;
+	height: 50px;
+	font-size: 20px;
+	border-top: 1px solid lightgray;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	margin: 0;
+}
+
+.tabmenu .on {
+	background-color: #22a8f1;
+}
+
+.tabmenu :hover {
+	cursor: pointer;
+}
+
+.tabtitle, .tabcontent {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.tabtitle ul {
+	list-style-type: none;
+	height: 58px;
+	padding: 0;
+	margin: 0;
+}
+
+.tabcontent ul {
+	list-style-type: none;
+	height: 58px;
+	padding: 0;
+	margin: 0;
+}
+
+.tabcontent ul li {
+	display: inline-block;
+	padding: 20px 0px;
+	border-bottom: 1px solid lightgray;
+}
+
+.tabtitle ul li {
+	display: inline-block;
+	/* border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray; */
+	padding: 20px 0px;
+	background-color: #22a8f1;
+	color: white;
+}
+
+.pageNum {
+	text-align: center;
+	padding: 30px 0px;
+}
+
+.pageNum ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.pageNum li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+.pageNum li:hover {
+	background-color: #22a8f1;
+	color: white;
+	cursor: pointer;
+}
+
+/*booking.html*/
+#booking {
+	width: 100%;
+	text-align: center;
+}
+
+.logTable {
+	width: 40%;
+	height: 250px;
+	margin: 0 auto;
+	margin-top: 100px;
+	border: 5px solid lightgray;
+}
+
+.logTable td {
+	text-align: center;
+	width: 50%;
+}
+
+.logTable div:hover {
+	cursor: pointer;
+}
+
+.logTable .mypage, .logTable .login {
+	width: 30%;
+	height: 40px;
+	font-size: 20px;
+	display: inline-block;
+	padding: 16px 0px 0px 0px;
+	margin-top: 20px;
+	background-color: #22a8f1;
+	color: white;
+	border: 0;
+}
+
+.logTable form {
+	width: 30%;
+	height: 40px;
+	padding: 16px 0px 0px 0px;
+	margin: 0 auto;
+	background-color: #22a8f1;
+	display: inline-block;
+}
+
+.logTable .logout {
+	border: 0;
+	background-color: #22a8f1;
+	color: white;
+	font-size: 20px;
+}
+
+.logTable p {
+	font-size: 12px;
+}
+
+.bookingsearch {
+	width: 45%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.bookingsearch h2 {
+	text-align: left;
+}
+
+.bookingsearch label {
+	font-size: 18px;
+	padding-right: 15px;
+	padding-top: 15px;
+}
+
+.bookingsearch input {
+	height: 25px;
+	margin-right: 15px;
+	margin-top: 15px;
+}
+
+.bookinglist {
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+.bookinglist h2 {
+	text-align: left;
+	padding-left: 17.7%;
+}
+
+.bookinglist ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+.bookinglist li {
+	display: inline-block;
+	font-size: 17px;
+	height: 40px;
+	padding-top: 17px;
+	margin-left: -4px;
+	border-left: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+}
+
+.bookinglist .blist-li {
+	background-color: lightgray;
+}
+
+.subbtn:hover {
+	cursor: pointer;
+}
+
+/*clinic.html*/
+#search {
+	width: 100%;
+	text-align: center;
+}
+
+#search .searchInput {
+	border: none;
+	border-bottom: 1px solid lightgray;
+}
+
+#search .searchBtn {
+	font-size: 18px;
+	font-family: 'NanumSquare';
+	background-size: 50px;
+	background-repeat: no-repeat;
+	border: none;
+	outline: none;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	margin-left: 20px;
+	vertical-align: bottom;
+}
+
+.searchBtn:hover {
+	cursor: pointer;
+}
+
+#searchResult {
+	width: 70%;
+	margin: 0em auto;
+}
+
+#clinicTable {
+	width: 100%;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 100px;
+}
+
+#clinicTable tr, td {
+	padding: 5px;
+}
+
+.noshowTable {
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.pageNum {
+	text-align: center;
+	padding: 30px 0px;
+	display: none;
+}
+
+.pageNum ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.pageNum li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+.pageNum li:hover {
+	background-color: #22a8f1;
+	color: white;
+	cursor: pointer;
+}
+
+/*login.html*/
+.input1 {
+	width: 400px;
+	height: 50px;
+	border: none;
+	outline: none;
+}
+
+#logo {
+	padding-top: 40px;
+	text-align: center;
+}
+
+#logo img {
+	width: 100px;
+	height: 100px;
+}
+
+.input2 {
+	width: 120px;
+	height: 50px;
+	font-size: 20px;
+	border: none;
+	outline: none;
+}
+
+.input2-sch {
+	width: 180px;
+	height: 50px;
+	font-size: 15px;
+	border: none;
+	outline: none;
+}
+
+.input2-sch:hover {
+	cursor: pointer;
+}
+
+.input3 {
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	border: none;
+	outline: none;
+}
+
+.input3:hover {
+	cursor: pointer;
+}
+
+.logout, .mypage:hover {
+	cursor: pointer;
+}
+
+.logout, ,mypage:focus {
+	border: 0;
+	outline: none;
+}
+
+.logout, ,mypage:active {
+	border: 0;
+	outline: none;
+}
+
+.logout, ,mypage:visited {
+	border: 0;
+	outline: none;
+}
+/*vetboard.html*/
+#vetboard-middle {
+	width: 100%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+#vetboard-middle .vet-table {
+	width: 80%;
+	margin: 0em auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.vet-table .t1 {
+	padding: 0;
+	background-color: #22a8f1;
+	height: 60px;
+}
+
+.vet-table .t2 {
+	padding: 0;
+	height: 60px;
+}
+
+.vet-pageNum {
+	text-align: center;
+	padding: 30px 0px;
+}
+
+.vet-pageNum ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.vet-pageNum li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+.vet-pageNum li:hover {
+	background-color: #22a8f1;
+	color: white;
+	cursor: pointer;
+}
+
+#writeBtn {
+	width: 150px;
+	height: 60px;
+	border: none;
+	outline: none;
+	font-size: 20px;
+	margin-top: 30px;
+	margin-right: 30px;
+}
+
+#writeBtn:hover {
+	cursor: pointer;
+}
+
+/*寃뚯떆�뙋*/
+.boardWriteTable {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.boardWriteTable th {
+	text-align: center;
+	background-color: #22a8f1;
+	color: white;
+	width: 15%;
+	padding: 20px;
+	font-size: 20px;
+}
+
+.boardWriteTable td {
+	background-color: whitesmoke;
+	width: 85%;
+}
+
+.table-name, .table-pass, .table-email, .table-title {
+	height: 25px;
+}
+
+.boardButtons {
+	text-align: center;
+}
+
+.boardBtnApply, .boardBtnRewrite, .boardBtnList:hover {
+	cursor: pointer;
+}
+
+/*寃뚯떆�뙋蹂닿린*/
+.boardViewTable {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.boardViewTable th {
+	text-align: center;
+	background-color: #22a8f1;
+	color: white;
+	width: 15%;
+	padding: 20px;
+	font-size: 20px;
+}
+
+.boardViewBtn {
+	text-align: center;
+}
+
+.boardViewBtnUpdate, .boardViewBtnDelete, .boardViewBtnList,
+	.boardViewBtnApply {
+	border: none;
+	font-size: 18px;
+	padding: 10px 20px;
+	margin-left: 10px;
+}
+
+.boardViewBtnUpdate, .boardViewBtnDelete, .boardViewBtnList,
+	.boardViewBtnApply:hover {
+	cursor: pointer;
+}
+
+/*�떎�쓬留� �뒪���씪*/
+.map_wrap, .map_wrap * {
+	margin: 0;
+	padding: 0;
+	font-family: 'Malgun Gothic', dotum, '�룍��', sans-serif;
+	font-size: 12px;
+}
+
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+.map_wrap {
+	position: relative;
+	width: 100%;
+	height: 500px;
+}
+
+#menu_wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 250px;
+	margin: 10px 0 30px 10px;
+	padding: 5px;
+	overflow-y: auto;
+	background: rgba(255, 255, 255, 0.7);
+	z-index: 1;
+	font-size: 12px;
+	border-radius: 10px;
+}
+
+.bg_white {
+	background: #fff;
+}
+
+#menu_wrap hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 2px solid #5F5F5F;
+	margin: 3px 0;
+}
+
+#menu_wrap .option {
+	text-align: center;
+}
+
+#menu_wrap .option p {
+	margin: 10px 0;
+}
+
+#menu_wrap .option button {
+	margin-left: 5px;
+}
+
+#placesList li {
+	list-style: none;
+}
+
+#placesList .item {
+	position: relative;
+	border-bottom: 1px solid #888;
+	overflow: hidden;
+	cursor: pointer;
+	min-height: 65px;
+}
+
+#placesList .item span {
+	display: block;
+	margin-top: 4px;
+}
+
+#placesList .item h5, #placesList .item .info {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#placesList .item .info {
+	padding: 10px 0 10px 55px;
+}
+
+#placesList .info .gray {
+	color: #8a8a8a;
+}
+
+#placesList .info .jibun {
+	padding-left: 26px;
+	background:
+		url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png)
+		no-repeat;
+}
+
+#placesList .info .tel {
+	color: #009900;
+}
+
+#placesList .item .markerbg {
+	float: left;
+	position: absolute;
+	width: 36px;
+	height: 37px;
+	margin: 10px 0 0 10px;
+	background:
+		url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png)
+		no-repeat;
+}
+
+#placesList .item .marker_1 {
+	background-position: 0 -10px;
+}
+
+#placesList .item .marker_2 {
+	background-position: 0 -56px;
+}
+
+#placesList .item .marker_3 {
+	background-position: 0 -102px
+}
+
+#placesList .item .marker_4 {
+	background-position: 0 -148px;
+}
+
+#placesList .item .marker_5 {
+	background-position: 0 -194px;
+}
+
+#placesList .item .marker_6 {
+	background-position: 0 -240px;
+}
+
+#placesList .item .marker_7 {
+	background-position: 0 -286px;
+}
+
+#placesList .item .marker_8 {
+	background-position: 0 -332px;
+}
+
+#placesList .item .marker_9 {
+	background-position: 0 -378px;
+}
+
+#placesList .item .marker_10 {
+	background-position: 0 -423px;
+}
+
+#placesList .item .marker_11 {
+	background-position: 0 -470px;
+}
+
+#placesList .item .marker_12 {
+	background-position: 0 -516px;
+}
+
+#placesList .item .marker_13 {
+	background-position: 0 -562px;
+}
+
+#placesList .item .marker_14 {
+	background-position: 0 -608px;
+}
+
+#placesList .item .marker_15 {
+	background-position: 0 -654px;
+}
+
+#pagination {
+	margin: 10px auto;
+	text-align: center;
+}
+
+#pagination a {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#pagination .on {
+	font-weight: bold;
+	cursor: default;
+	color: #777;
+}
+
+/*留덉씠�럹�씠吏�*/
+.mypageBack {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.mypageLeft {
+	width: 15%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.mypageLeft ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.mypageRight {
+	width: 80%;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+.instaRight{
+	width: 80%;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+.mypageRight table {
+	width: 100%;
+	font-weight: initial;
+	margin: 0 auto;
+}
+
+.mypageRight th {
+	background-color: #22a8f1;
+	color: white;
+	height: 50px;
+	text-align: center;
+	margin-left: -2px;
+}
+
+.mypageRight td {
+	height: 50px;
+	text-align: center;
+}
+
+.board-pageNum a {
+	text-decoration: none;
+}
+
+.mypageBack a {
+	text-decoration: none;
+}
+
+/*�옄媛�吏꾨떒*/
+.q1 {
+	display: inline-block;
+	width: 250px;
+	margin-bottom: 20px;
+}
+
+.check1 {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.selfinsOl {
+	list-style-type: none;
+}
+
+.selfinsBack {
+	background-image: url('../image/selfinspec.png');
+}
